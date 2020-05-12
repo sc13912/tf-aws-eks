@@ -1,0 +1,12 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  namespace: guestbook-app
+  name: redis-slave-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: fast-50
+  resources:
+    requests:
+      storage: 4Gi
