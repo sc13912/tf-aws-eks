@@ -20,7 +20,11 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/down
 # Deploy Storage Classes (Persistent Storage)
 kubectl apply -f ./storage/storageclass/  
 
+# Optional - Deploy CSI Driver (follow below guide)
+https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html
+
 # Deploy Demo-App: Guestbook
+kubectl create ns guestbook-app
 kubectl apply -f ./demo-apps/guestbook/  
 
 # Deploy Demo-App: GCP HispterShop
