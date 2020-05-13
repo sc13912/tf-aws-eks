@@ -22,21 +22,21 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/down
 kubectl apply -f ./storage/storageclass/  
 
 # Deploy NGINX Ingress Controller
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-0.32.0/deploy/static/provider/aws/deploy.yaml  
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-0.32.0/deploy/static/provider/aws/deploy.yaml   
 
 # Optional - Deploy CSI Driver (follow below guide)
-https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html
+https://docs.aws.amazon.com/eks/latest/userguide/ebs-csi.html  
 
 # Deploy Demo-App: GCP HispterShop
-kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/master/release/kubernetes-manifests.yaml
+kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/microservices-demo/master/release/kubernetes-manifests.yaml  
 
 # Deploy Demo-App: Guestbook (verify Storage Classes)
-kubectl create ns guestbook-app
-kubectl apply -f ./demo-apps/guestbook/  
+kubectl create ns guestbook-app  
+kubectl apply -f ./demo-apps/guestbook/    
 
 # Deploy Demo-App: Yelb (verify Ingress Controller)
-kubectl create ns yelb
-kubectl apply -f ./demo-apps/yelb/
+kubectl create ns yelb  
+kubectl apply -f ./demo-apps/yelb/  
 
 
 
